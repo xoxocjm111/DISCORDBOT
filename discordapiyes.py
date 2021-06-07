@@ -4,6 +4,7 @@ from discord.ext import commands, tasks
 import webbrowser
 import os
 
+#token is a fake to prevent YOU from messing with my discord server... you silly
 token = 'NzMzODI4Njc3OTI5Nzk1NjQ0.XxI1Ng.xf4MFn-epZDZG9wk5B6UYG7yYxc'
 
 #init client
