@@ -40,7 +40,7 @@ async def tellmeajoke(ctx):
 #im going to hate this fucking feature
 async def annoychris(ctx, arg):
   os.system('sensible-browser https://google.com/search?q=' + arg)
-  await ctx.send('FUCK YOU')
+  await ctx.send('**** ***')
 
 @client.command(pass_context=True)
 async def help(ctx):
