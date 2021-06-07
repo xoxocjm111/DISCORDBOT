@@ -3,9 +3,14 @@ from datetime import date
 from discord.ext import commands, tasks
 import webbrowser
 import os
+import time
 
-#token is a fake to prevent YOU from messing with my discord server... you silly
-token = 'NzMzODI4Njc3OTI5Nzk1NjQ0.XxI1Ng.xf4MFn-epZDZG9wk5B6UYG7yYxc'
+token = 'NzMzODI4Njc3OTI5Nzk1NjQ0.XxI1Ng.i_xTX-sSVwD2e32UnCV51-CJA_Y'
+
+os.system('clear')
+
+print('Initializing Client...')
+
 
 #init client
 client = commands.Bot(command_prefix = '?')
@@ -17,7 +22,40 @@ today = date.today()
 #Displays when bot is ready
 @client.event
 async def on_ready():
-  print('Bot is ready')
+  print('Client Ready..')
+
+
+
+  print("""
+  APCS PROJ.
+
+  just a simple bot for Discord.
+
+  what it can do:
+
+  It can open web pages on my pc and if you use ?annoychris (type something here) in my discord bot spam channel it will open a webpage on my browser.
+
+  https://discord.gg/THDBHFbvaB LINK TO MY DISCORD
+  """)
+  time.sleep(2)
+
+
+
+  print(" ")
+
+  print('[1] Restart')
+
+  print('[2] Exit')
+  print(" ")
+
+  usrImpt = input('dbbot > ')
+
+
+  if usrImpt == '1':
+    os.system('python3 discordapiyes.py')
+
+  if usrImpt == '2':
+    exit()
 
 #Sends input back to user
 @client.command()
@@ -41,7 +79,7 @@ async def tellmeajoke(ctx):
 #im going to hate this fucking feature
 async def annoychris(ctx, arg):
   os.system('sensible-browser https://google.com/search?q=' + arg)
-  await ctx.send('**** ***')
+  await ctx.send('FUCK YOU')
 
 @client.command(pass_context=True)
 async def help(ctx):
@@ -62,5 +100,10 @@ async def help(ctx):
 
 
   await ctx.send(author, embed=embed)
+
+@client.command()
+async def clear(ctx, number=5):
+  await ctx.channel.purge(limit=number)
+
 
 client.run(token)
