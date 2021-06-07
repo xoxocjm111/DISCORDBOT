@@ -1,6 +1,6 @@
 #DISCORD BOT FOR MY APCS PROJ.
 
-#just a simple bot for instagram.
+#just a simple bot for Discord.
 
 #what it can do:
 
